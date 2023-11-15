@@ -1,14 +1,30 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
+import { LandingPageComponent} from './components/landing-page/landing-page.component';
+import { NavBarComponent } from "./components/shared/nav-bar/nav-bar.component";
+import { SideBarComponent } from "./components/shared/side-bar/side-bar.component";
+import { LoginPageComponent } from "./components/login-page/login-page.component";
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [CommonModule, RouterOutlet, LandingPageComponent, NavBarComponent, SideBarComponent, LoginPageComponent, MatCardModule, MatButtonModule, MatFormFieldModule]
 })
 export class AppComponent {
   title = 'AdminPanel';
+  reset: boolean = false;
+
+  constructor(private router: Router) {}
+
+  ForgotPassword(){
+    console.log("testing")
+    this.reset = true;
+    this.router.navigate(['ResetPassword']);
+  }
 }

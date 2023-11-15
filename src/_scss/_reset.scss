@@ -1,0 +1,15 @@
+.btn-outline-primary {
+    height: 2.5rem !important;
+}
+.btn {
+    // width: 5rem !important;
+    &-md {
+        width: 5rem !important;
+    }
+    &-xl {
+        width: 23rem !important;
+    }
+}
+.form-control {
+    font-size: 0.8rem !important;
+}

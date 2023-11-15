@@ -18,7 +18,6 @@ export class ResetpasswordPageComponent {
   constructor(private router: Router) {}
 
   backToLogin(){
-    console.log("testing")
     this.router.navigate(['']);
   }
 }

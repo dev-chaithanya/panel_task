@@ -18,13 +18,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 })
 export class AppComponent {
   title = 'AdminPanel';
-  reset: boolean = false;
 
   constructor(private router: Router) {}
 
   ForgotPassword(){
     console.log("testing")
-    this.reset = true;
     this.router.navigate(['ResetPassword']);
   }
 }

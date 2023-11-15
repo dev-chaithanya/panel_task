@@ -15,7 +15,7 @@
   }
 
   .title-style {
-    color:$primary-blue;
+    color:$primary-blue !important;
     font-size: 0.9rem !important;
     margin-left: 50% !important;
     cursor: pointer;
@@ -50,7 +50,7 @@
 }
 
 .title-style-reset {
-    color:$primary-blue;
+    color:$primary-blue !important;
     font-size: 0.9rem !important;
     margin-left: 30% !important;
     cursor: pointer;

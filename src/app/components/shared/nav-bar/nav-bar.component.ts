@@ -7,6 +7,7 @@ import { MatListModule} from '@angular/material/list';
 import { RouterOutlet} from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
 import { LandingPageComponent } from "../../landing-page/landing-page.component";
+import {MatButtonModule} from '@angular/material/button';
 @Component({
     selector: 'app-nav-bar',
     standalone: true,
@@ -14,7 +15,7 @@ import { LandingPageComponent } from "../../landing-page/landing-page.component"
     styleUrl: './nav-bar.component.scss',
     imports: [CommonModule, SideBarComponent, MatToolbarModule,
         MatIconModule, MatListModule, RouterOutlet,
-        MatMenuModule, LandingPageComponent]
+        MatMenuModule, LandingPageComponent, MatButtonModule]
 })
 export class NavBarComponent {
   showMenu = false;

@@ -37,7 +37,8 @@ export class LoginPageComponent {
     if (this.email === 'chaithanyanair06@gmail.com' && this.password === 'chaithanya12345') {
       console.log(this.email, this.password);
     this.router.navigate(['LandingPage']);
-    } else {
+    } 
+    else {
       this.errorMessage = "Invalid email or password"
     }
   }

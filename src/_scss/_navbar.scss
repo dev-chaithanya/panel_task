@@ -5,7 +5,6 @@
   .example-is-mobile .example-toolbar {
     position: fixed;
     z-index: 2;
-    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
   }
   
   h1.example-app-name {
@@ -15,22 +14,19 @@
   
   .example-sidenav-container {
     flex: 1;
-    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
   }
   
   .example-is-mobile .example-sidenav-container {
-    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
-       `<body>` to be our scrolling element for mobile layouts. */
     flex: 1 0 auto;
   }
-
-  .button-custom {
-    border: none !important;
-    background: unset !important;
-    }
   
 .sidebar-custom{
     height: 40rem !important;
     background-color: $primary-grey !important;
 }
+
+.closed-sidebar {
+    width: 0;  /* Set the width to 0 to hide the sidebar when closed */
+    overflow: hidden;  /* Hide any content that overflows the hidden sidebar */
+  transition: width 0.3s ease;  /* Add a smooth transition effect */
+  }

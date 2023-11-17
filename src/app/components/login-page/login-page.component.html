@@ -7,15 +7,14 @@
         <div>
             <hr class="divider-style">
         </div>
-        <!-- <h6 class="title-style-custom">Create an account</h6> -->
         <button mat-flat-button class="title-style-custom" (click)="CreateAccount()">Create an account</button>
       <form>
         <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email">
+            <input type="email" class="form-control" placeholder="Email" [(ngModel)]="email" name="email">
         </div>
 
         <div class="form-group mt-4">
-            <input type="password" class="form-control" placeholder="password">
+            <input type="password" class="form-control" placeholder="password" [(ngModel)]="password" name="password">
         </div>
         <div>
             <button mat-flat-button class="title-style-button mt-4" (click)="ForgotPassword()">Forgotten your password?</button>
@@ -24,6 +23,7 @@
         <div class="custom-align mt-4 mb-3">
             <button type="button" class="btn btn-md btn-outline-primary" (click)="Login()">login</button>
         </div>
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
       </form>
       <div class="row">
         <div class="col-4"><hr class="divider-style-xs"></div>

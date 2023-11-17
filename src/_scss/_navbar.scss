@@ -10,6 +10,7 @@
   
   h1.example-app-name {
     margin-left: 8px;
+    color: $primary-blue !important;
   }
   
   .example-sidenav-container {
@@ -29,3 +30,7 @@
     background: unset !important;
     }
   
+.sidebar-custom{
+    height: 40rem !important;
+    background-color: $primary-grey !important;
+}

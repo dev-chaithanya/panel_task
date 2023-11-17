@@ -5,9 +5,9 @@ import { LandingPageComponent} from './components/landing-page/landing-page.comp
 import { NavBarComponent } from "./components/shared/nav-bar/nav-bar.component";
 import { SideBarComponent } from "./components/shared/side-bar/side-bar.component";
 import { LoginPageComponent } from "./components/login-page/login-page.component";
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatCardModule} from '@angular/material/card';
+import { MatButtonModule} from '@angular/material/button';
+import { MatFormFieldModule} from '@angular/material/form-field';
 
 @Component({
     selector: 'app-root',

@@ -22,4 +22,14 @@ export class LoginPageComponent {
     console.log("testing")
     this.router.navigate(['ResetPassword']);
   }
+
+  Login(){
+    console.log("testing");
+    this.router.navigate(['LandingPage']);
+  }
+
+  CreateAccount(){
+    console.log("testing");
+    this.router.navigate(['RegisterPage']);
+  }
 }

@@ -26,9 +26,9 @@
     }
 
  .title-style-custom {
-        color:$primary-blue;
-        font-size: 0.9rem !important;
-        margin-left: 30% !important;
+        color:$primary-blue !important;
+        font-size: 0.8rem !important;
+        margin-left: 25% !important;
         cursor: pointer;
       }
 
@@ -53,5 +53,12 @@
     color:$primary-blue !important;
     font-size: 0.9rem !important;
     margin-left: 30% !important;
+    cursor: pointer;
+  }
+
+  .title-style-button {
+    color:$primary-blue !important;
+    font-size: 0.7rem !important;
+    margin-left: 49% !important;
     cursor: pointer;
   }

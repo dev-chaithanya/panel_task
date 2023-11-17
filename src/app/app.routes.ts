@@ -23,10 +23,11 @@ import { LoginPageComponent } from './components/login-page/login-page.component
         path: 'LoginPage',
         component:  LoginPageComponent 
     },
-    /*{
-        path: '',
-        component:  AppComponent
-    }*/
+    {
+        path: '', 
+        redirectTo: '/LoginPage', 
+        pathMatch: 'full'
+    }
 ];
 
 @NgModule({

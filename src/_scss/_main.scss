@@ -11,3 +11,7 @@ section {
   .sidebar-open .content {
     margin-left: 40rem; /* Adjust margin based on your sidebar width */
   }
+
+  .content {
+    overflow:hidden !important;
+  }

@@ -18,10 +18,10 @@
     <!-- <app-side-bar *ngIf="showMenu"></app-side-bar> -->
     <mat-drawer-container class="example-container" autosize>
         <mat-drawer #drawer class="example-sidenav" mode="side">
-            <mat-list role="list" class="sidebar-custom ">
-                <mat-list-item role="dashboard"><button mat-button> <mat-icon>dashboard</mat-icon><span
+            <mat-list role="list">
+                <mat-list-item role="dashboard"><button mat-button (click)="viewDashboard()"> <mat-icon>dashboard</mat-icon><span
                             class="ms-4">Dashboard</span></button></mat-list-item>
-                <mat-list-item role="employeeData"><button mat-button> <mat-icon>people</mat-icon><span class="ms-4">Employee
+                <mat-list-item role="employeeData"><button mat-button (click)="viewEmployeeDetails()"> <mat-icon>people</mat-icon><span class="ms-4">Employee
                             Details</span></button></mat-list-item>
                 <mat-list-item role="AdminData"><button mat-button><img src="../../../../assets/icons/admin.svg"
                             class="icon-m"><span class="ms-3">Admin Details</span></button></mat-list-item>
@@ -30,6 +30,11 @@
             </mat-list>
         </mat-drawer>
         <div class="example-sidenav-content">
-            <app-side-bar></app-side-bar>
+            <div class="content" #dashboard>
+                <app-dashboard-page></app-dashboard-page>
+            </div>
+            <div class="content" #report>
+                <app-report-page></app-report-page>
+            </div>
         </div>
     </mat-drawer-container>

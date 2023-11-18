@@ -20,13 +20,17 @@
     flex: 1 0 auto;
   }
   
-.sidebar-custom{
-    height: 40rem !important;
+.sidebar-custom {
+    min-height: 40rem !important;
     background-color: $primary-grey !important;
 }
 
-.closed-sidebar {
-    width: 0;  /* Set the width to 0 to hide the sidebar when closed */
-    overflow: hidden;  /* Hide any content that overflows the hidden sidebar */
-  transition: width 0.3s ease;  /* Add a smooth transition effect */
-  }
+// .closed-sidebar {
+//     width: 0;  /* Set the width to 0 to hide the sidebar when closed */
+//     overflow: hidden;  /* Hide any content that overflows the hidden sidebar */
+//   transition: width 0.3s ease;  /* Add a smooth transition effect */
+//   }
+// .custom-height{
+//     min-height: 40rem !important;
+//     border-color: $primary-grey !important;
+// }

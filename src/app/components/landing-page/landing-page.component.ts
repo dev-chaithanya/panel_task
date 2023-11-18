@@ -11,5 +11,10 @@ import { SideBarComponent } from "../shared/side-bar/side-bar.component";
     imports: [CommonModule, NavBarComponent, SideBarComponent]
 })
 export class LandingPageComponent {
+    isToggled = false;
 
+    onToggleChange(value: any) {
+        this.isToggled = value;
+        console.log("parent:",this.isToggled)
+      }
 }

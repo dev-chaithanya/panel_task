@@ -1,0 +1,13 @@
+section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    margin-top: 20px; /* Adjust margin based on your design */
+  }
+  
+  /* Apply styles when the sidebar is open */
+  .sidebar-open .content {
+    margin-left: 40rem; /* Adjust margin based on your sidebar width */
+  }

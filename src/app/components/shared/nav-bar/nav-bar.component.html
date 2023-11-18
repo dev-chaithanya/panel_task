@@ -1,6 +1,6 @@
 <mat-toolbar class="example-toolbar">
 
-    <button mat-icon-button class="button-custom mt-2" (click)="toggleMenu()"><mat-icon class="icon-style">menu</mat-icon></button>
+    <button mat-icon-button class="button-custom mt-2" (click)="drawer.toggle()"><mat-icon class="icon-style">menu</mat-icon></button>
     <h1 class="example-app-name">USecure</h1>
     <span class="example-spacer"></span>
     <mat-icon class="icon-style icon-s" [matMenuTriggerFor]="menu">account_circle</mat-icon>
@@ -15,6 +15,21 @@
     <router-outlet></router-outlet>
 </div>
 
-<div>
-    <app-side-bar *ngIf="showMenu"></app-side-bar>
-</div>
+    <!-- <app-side-bar *ngIf="showMenu"></app-side-bar> -->
+    <mat-drawer-container class="example-container" autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+            <mat-list role="list" class="sidebar-custom ">
+                <mat-list-item role="dashboard"><button mat-button> <mat-icon>dashboard</mat-icon><span
+                            class="ms-4">Dashboard</span></button></mat-list-item>
+                <mat-list-item role="employeeData"><button mat-button> <mat-icon>people</mat-icon><span class="ms-4">Employee
+                            Details</span></button></mat-list-item>
+                <mat-list-item role="AdminData"><button mat-button><img src="../../../../assets/icons/admin.svg"
+                            class="icon-m"><span class="ms-3">Admin Details</span></button></mat-list-item>
+                <mat-list-item role="listitem"><button mat-button><mat-icon>file_copy</mat-icon><span
+                            class="ms-4">Reports</span></button></mat-list-item>
+            </mat-list>
+        </mat-drawer>
+        <div class="example-sidenav-content">
+            <app-side-bar></app-side-bar>
+        </div>
+    </mat-drawer-container>

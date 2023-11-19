@@ -8,7 +8,7 @@
         <button mat-menu-item><mat-icon>person</mat-icon> Profile</button>
         <button mat-menu-item><mat-icon>payment</mat-icon> Payment</button>
         <button mat-menu-item><mat-icon>settings</mat-icon> Settings</button>
-        <button mat-menu-item><mat-icon>power_settings_new</mat-icon> Logout</button>
+        <button mat-menu-item (click)="logout()"><mat-icon>power_settings_new</mat-icon> Logout</button>
       </mat-menu>
 </mat-toolbar>
 <div>
@@ -23,9 +23,9 @@
                             class="ms-4">Dashboard</span></button></mat-list-item>
                 <mat-list-item role="employeeData"><button mat-button (click)="viewEmployeeDetails()"> <mat-icon>people</mat-icon><span class="ms-4">Employee
                             Details</span></button></mat-list-item>
-                <mat-list-item role="AdminData"><button mat-button><img src="../../../../assets/icons/admin.svg"
+                <mat-list-item role="AdminData"><button mat-button (click)="viewAdminDetails()"><img src="../../../../assets/icons/admin.svg"
                             class="icon-m"><span class="ms-3">Admin Details</span></button></mat-list-item>
-                <mat-list-item role="listitem"><button mat-button><mat-icon>file_copy</mat-icon><span
+                <mat-list-item role="listitem"><button mat-button (click)="viewReportDetails()"><mat-icon>file_copy</mat-icon><span
                             class="ms-4">Reports</span></button></mat-list-item>
             </mat-list>
         </mat-drawer>
@@ -33,7 +33,13 @@
             <div class="content" #dashboard>
                 <app-dashboard-page></app-dashboard-page>
             </div>
-            <div class="content" #report>
+            <div class="content mt-3" #employee>
+                <app-employee-details></app-employee-details>
+            </div>
+            <div class="content mt-3" #admin>
+                <app-admin-details></app-admin-details>
+            </div>
+            <div class="content mt-3" #report>
                 <app-report-page></app-report-page>
             </div>
         </div>

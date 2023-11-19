@@ -44,7 +44,6 @@ export class LoginPageComponent {
   }
 
   CreateAccount(){
-    console.log("testing");
     this.router.navigate(['RegisterPage']);
   }
 }

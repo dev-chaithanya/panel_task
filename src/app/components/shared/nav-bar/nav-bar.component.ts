@@ -11,6 +11,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { DashboardPageComponent } from "../../dashboard-page/dashboard-page.component";
 import { ReportPageComponent } from "../../report-page/report-page/report-page.component";
+import { AdminDetailsComponent } from "../../admin-details/admin-details.component";
+import { EmployeeDetailsComponent } from "../../employee-details/employee-details.component";
 @Component({
     selector: 'app-nav-bar',
     standalone: true,
@@ -19,12 +21,16 @@ import { ReportPageComponent } from "../../report-page/report-page/report-page.c
     imports: [CommonModule, SideBarComponent, MatToolbarModule,
         MatIconModule, MatListModule, RouterOutlet,
         MatMenuModule, LandingPageComponent, MatButtonModule,
-        MatSidenavModule, DashboardPageComponent, ReportPageComponent]
+        MatSidenavModule, DashboardPageComponent, ReportPageComponent,
+        AdminDetailsComponent, EmployeeDetailsComponent]
 })
 export class NavBarComponent {
   @Output() menuToggled = new EventEmitter<boolean>();
   @ViewChild('dashboard') dashboard: ElementRef | any;
   @ViewChild('report') report: ElementRef | any;
+  @ViewChild('admin') admin: ElementRef | any;
+  @ViewChild('employee') employee: ElementRef | any;
+
   showMenu = false;
 
     toggleMenu() {
@@ -38,9 +44,19 @@ export class NavBarComponent {
     this.dashboard.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 
-  viewEmployeeDetails(){
+  viewReportDetails(){
     this.report.nativeElement.scrollIntoView({ behavior: 'smooth' });
-
   }
 
+  viewAdminDetails(){
+    this.admin.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  viewEmployeeDetails(){
+    this.employee.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  logout(){
+    this.router.navigate(['LoginPage']);
+  }
 }

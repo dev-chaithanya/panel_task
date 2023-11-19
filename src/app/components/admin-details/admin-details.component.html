@@ -1,0 +1,99 @@
+<div class="container ms-2">
+    <mat-tab-group>
+        <mat-tab label="Admin"> 
+            <div class="align-custom ms-5"><button mat-stroked-button class="button-color"> Add</button>
+                </div>
+            <div class="row ms-3">
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                    <!-- id Column -->
+                    <ng-container matColumnDef="id">
+                      <th mat-header-cell *matHeaderCellDef> ID </th>
+                      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                    </ng-container>
+                  
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                      <th mat-header-cell *matHeaderCellDef> Name </th>
+                      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+                  
+                    <!-- email Column -->
+                    <ng-container matColumnDef="email">
+                      <th mat-header-cell *matHeaderCellDef> Email </th>
+                      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                    </ng-container>
+                  
+                    <!-- reportingManager Column -->
+                    <ng-container matColumnDef="reportingManager">
+                      <th mat-header-cell *matHeaderCellDef> reporting Manager </th>
+                      <td mat-cell *matCellDef="let element"> {{element.reportingManager}} </td>
+                    </ng-container>
+
+                    <!-- Designation Column -->
+                    <ng-container matColumnDef="Designation">
+                        <th mat-header-cell *matHeaderCellDef> Designation </th>
+                        <td mat-cell *matCellDef="let element"> {{element.Designation}} </td>
+                      </ng-container>
+
+                      <!-- Location Column -->
+                    <ng-container matColumnDef="Location">
+                        <th mat-header-cell *matHeaderCellDef> Location </th>
+                        <td mat-cell *matCellDef="let element"> {{element.Location}} </td>
+                      </ng-container>
+                  
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Super Admin">
+            <div class="align-custom ms-5"><button mat-stroked-button class="button-color"> Add</button>
+            </div>
+        <div class="row ms-3">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <!-- id Column -->
+                <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef> ID </th>
+                  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+              
+                <!-- email Column -->
+                <ng-container matColumnDef="email">
+                  <th mat-header-cell *matHeaderCellDef> Email </th>
+                  <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                </ng-container>
+              
+                <!-- reportingManager Column -->
+                <ng-container matColumnDef="reportingManager">
+                  <th mat-header-cell *matHeaderCellDef> reporting Manager </th>
+                  <td mat-cell *matCellDef="let element"> {{element.reportingManager}} </td>
+                </ng-container>
+
+                <!-- Designation Column -->
+                <ng-container matColumnDef="Designation">
+                    <th mat-header-cell *matHeaderCellDef> Designation </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Designation}} </td>
+                  </ng-container>
+
+                  <!-- Location Column -->
+                <ng-container matColumnDef="Location">
+                    <th mat-header-cell *matHeaderCellDef> Location </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Location}} </td>
+                  </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+        </div>
+        </mat-tab>
+      </mat-tab-group>
+</div>

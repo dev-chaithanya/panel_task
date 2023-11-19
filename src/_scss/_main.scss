@@ -1,0 +1,16 @@
+section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    margin-top: 20px;
+  }
+
+  .sidebar-open .content {
+    margin-left: 40rem;
+  }
+
+  .content {
+    overflow:hidden !important;
+  }

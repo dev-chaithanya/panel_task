@@ -10,7 +10,8 @@ import { LoginPageComponent } from '../login-page/login-page.component';
 @Component({
   selector: 'app-resetpassword-page',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatButtonModule, MatFormFieldModule, RouterOutlet, LoginPageComponent],
+  imports: [CommonModule, MatCardModule, MatButtonModule, 
+            MatFormFieldModule, RouterOutlet, LoginPageComponent],
   templateUrl: './resetpassword-page.component.html',
   styleUrl: './resetpassword-page.component.scss'
 })

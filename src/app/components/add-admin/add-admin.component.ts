@@ -4,7 +4,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validator, Validators, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -20,7 +20,7 @@ export class AddAdminComponent {
 
   adminForm !: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private dialogref: MatDialogRef<AddAdminComponent>) { }
 
   ngOnInit(): void {
     this.adminForm = this.formBuilder.group({
@@ -31,7 +31,10 @@ export class AddAdminComponent {
     });
   }
 
+  
   addAdmin() {
     console.log(this.adminForm.value)
+    this.adminForm.reset();
+    this.dialogref.close();
   }
 }

@@ -5,7 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-edit-admin',
@@ -20,7 +20,7 @@ export class EditAdminComponent {
 
   editAdminForm !: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private dialogref: MatDialogRef<EditAdminComponent>) { }
 
   ngOnInit(): void {
     this.editAdminForm = this.formBuilder.group({
@@ -33,5 +33,7 @@ export class EditAdminComponent {
 
   EditAdmin(){
     console.log(this.editAdminForm.value)
+    this.editAdminForm.reset();
+    this.dialogref.close();
   }
 }

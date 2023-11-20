@@ -14,3 +14,36 @@ section {
   .content {
     overflow:hidden !important;
   }
+
+  .color-section{
+    background-color: $primary-grey !important;
+    height: 100% !important;
+  }
+
+  .button-bg-custom{
+    background: none !important;
+    color: $primary-blue !important;
+    border: none !important;
+  }
+
+  .custom-text-size{
+    font-size: $Font-xl;
+    color: $secondary-blue;
+  }
+
+  .custom-text{
+    color: $primary-blue;
+    font-weight: $font-bold-m;
+  }
+
+  .title-color{
+    color: $primary-blue;
+  }
+
+  .no-padding-x {
+    padding-left: 0 !important;
+  }
+
+  .profile-card{
+    width: 100% !important
+  }

@@ -56,6 +56,10 @@ export class NavBarComponent {
     this.employee.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 
+  viewProfile(){
+    this.router.navigate(['Profile'])
+  }
+
   logout(){
     this.router.navigate(['LoginPage']);
   }

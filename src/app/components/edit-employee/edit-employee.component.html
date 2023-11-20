@@ -1,0 +1,40 @@
+<h3 class="title-style-color" mat-dialog-title>Edit Employee</h3>
+<div mat-dialog-content class="mt-2 pt-2">
+    <form [formGroup]="editEmployeeForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Employee Id</mat-label>
+            <input formControlName="employeeId" matInput placeholder="Employee Id">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Employee Name</mat-label>
+            <input formControlName="employeeName" matInput placeholder="Employee Name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Employee Email</mat-label>
+            <input formControlName="employeeEmail" matInput placeholder="Employee Email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Reporting Manager</mat-label>
+            <input formControlName="reportingManager" matInput placeholder="Reporting Manager">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Designation</mat-label>
+            <input formControlName="designation" matInput placeholder="Designation">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Location</mat-label>
+            <mat-select formControlName="location" placeholder="Location">
+                <mat-option value="banglore">Banglore</mat-option>
+                <mat-option value="Chennai">Chennai</mat-option>
+                <mat-option value="Kochi">Kochi</mat-option>
+                <mat-option value="Kolkata">Kolkata</mat-option>
+                <mat-option value="New Delhi">New Delhi</mat-option>
+                <mat-option value="Mumbai">Mumbai</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</div>
+<div class="mt-2 pt-2 pb-1" [align]="'end'">
+    <button mat-stroked-button mat-dialog-close class="button-color">Cancel</button>
+    <button mat-raised-button class="button-color-primary ms-4" (click)="EditEmployee()">Edit</button>
+</div>

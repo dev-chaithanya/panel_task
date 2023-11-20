@@ -1,4 +1,7 @@
 <div class="row ms-2 mt-5">
+    <div class="ms-3 mb-3">
+        <button mat-stroked-button *ngIf="isButtonVisible()" (click)="goBack()" class="button-bg-custom"><mat-icon class="icon-style">keyboard_arrow_left</mat-icon> Back</button> <span class="button-color"> <h2>Reports</h2></span>
+    </div>
     <h1 class="title-style-color">Stimulation Report</h1>
     <div class="col-8">
         <canvasjs-chart [options]="chartOptions"></canvasjs-chart>

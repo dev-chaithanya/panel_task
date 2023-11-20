@@ -8,6 +8,7 @@ import {MatCardModule} from '@angular/material/card';
 import { UserData, EXAMPLE_DATA } from '../../data';
 import { EditEmployeeComponent } from '../edit-employee/edit-employee.component';
 import {MatIconModule} from '@angular/material/icon';
+import { Router } from '@angular/router';
 
 // import { ApiService } from '../../services/api.service';
 // import { HttpClientModule } from '@angular/common/http';
@@ -28,7 +29,7 @@ export class EmployeeDetailsComponent {
   dataSource = new MatTableDataSource<UserData>(EXAMPLE_DATA);
 
   
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private router: Router) {}
 
   addEmployee(){
     const dialogRef = this.dialog.open(AddEmployeeComponent, {
@@ -40,5 +41,14 @@ export class EmployeeDetailsComponent {
     const dialogRef = this.dialog.open(EditEmployeeComponent,{
       width: '30%',
     });
+  }
+  
+  isButtonVisible(): boolean {
+    const currentRoute = this.router.url;
+    return currentRoute === '/EmployeeDetailsPage';
+  }
+
+  goBack() {
+    this.router.navigate(['LandingPage']);
   }
 }

@@ -1,46 +1,56 @@
 <mat-toolbar class="example-toolbar">
 
-    <button mat-icon-button class="button-custom mt-2" (click)="drawer.toggle()"><mat-icon class="icon-style">menu</mat-icon></button>
-    <h1 class="example-app-name">USecure</h1>
+    <button mat-icon-button class="button-custom mt-2" (click)="drawer.toggle()"><mat-icon
+            class="icon-style">menu</mat-icon></button>
+    <h1 class="example-app-name mt-1">USecure</h1>
     <span class="example-spacer"></span>
     <mat-icon class="icon-style icon-s" [matMenuTriggerFor]="menu">account_circle</mat-icon>
     <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="viewProfile()"><mat-icon class="icon-style">person</mat-icon> Profile</button>
-        <button mat-menu-item><mat-icon class="icon-style">payment</mat-icon> Payment</button>
-        <button mat-menu-item><mat-icon class="icon-style">settings</mat-icon> Settings</button>
-        <button mat-menu-item (click)="logout()"><mat-icon class="icon-style">power_settings_new</mat-icon> Logout</button>
-      </mat-menu>
+        <button mat-menu-item class="button-font" (click)="viewProfile()"><mat-icon class="icon-style">person</mat-icon>
+            Profile</button>
+        <button mat-menu-item class="button-font"><mat-icon class="icon-style">payment</mat-icon> Payment</button>
+        <button mat-menu-item class="button-font"><mat-icon class="icon-style">settings</mat-icon> Settings</button>
+        <button mat-menu-item class="button-font" (click)="logout()"><mat-icon
+                class="icon-style">power_settings_new</mat-icon> Logout</button>
+    </mat-menu>
 </mat-toolbar>
 <div>
     <router-outlet></router-outlet>
 </div>
 
-    <!-- <app-side-bar *ngIf="showMenu"></app-side-bar> -->
-    <mat-drawer-container class="example-container" autosize>
-        <mat-drawer #drawer class="example-sidenav" mode="side">
-            <mat-list role="list">
-                <mat-list-item role="dashboard"><button mat-button (click)="viewDashboard()"> <mat-icon>dashboard</mat-icon><span
-                            class="ms-4">Dashboard</span></button></mat-list-item>
-                <mat-list-item role="employeeData"><button mat-button (click)="viewEmployeeDetails()"> <mat-icon>people</mat-icon><span class="ms-4">Employee
-                            Details</span></button></mat-list-item>
-                <mat-list-item role="AdminData"><button mat-button (click)="viewAdminDetails()"><img src="../../../../assets/icons/admin.svg"
-                            class="icon-m"><span class="ms-3">Admin Details</span></button></mat-list-item>
-                <mat-list-item role="listitem"><button mat-button (click)="viewReportDetails()"><mat-icon>file_copy</mat-icon><span
-                            class="ms-4">Reports</span></button></mat-list-item>
-            </mat-list>
-        </mat-drawer>
-        <div class="example-sidenav-content">
-            <div class="content" #dashboard>
-                <app-dashboard-page></app-dashboard-page>
-            </div>
-            <div class="content mt-3" #employee>
-                <app-employee-details></app-employee-details>
-            </div>
-            <div class="content mt-3" #admin>
-                <app-admin-details></app-admin-details>
-            </div>
-            <div class="content mt-3" #report>
-                <app-report-page></app-report-page>
-            </div>
+<!-- <app-side-bar *ngIf="showMenu"></app-side-bar> -->
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <mat-list role="list">
+            <mat-list-item role="dashboard"><button mat-button class="button-font" (click)="viewDashboard()">
+                    <mat-icon>dashboard</mat-icon><span class="ms-4">Dashboard</span></button></mat-list-item>
+            <mat-list-item role="employeeData"><button mat-button class="button-font" (click)="viewEmployeeDetails()">
+                    <mat-icon>people</mat-icon><span class="ms-4">Employee
+                        Details</span></button></mat-list-item>
+            <mat-list-item role="mspData"><button mat-button class="button-font" (click)="viewAdminDetails()">
+                    <mat-icon>people</mat-icon><span class="ms-4">MSP
+                        Details</span></button></mat-list-item>
+            <mat-list-item role="AdminData"><button mat-button class="button-font"
+                    (click)="viewSuperAdminDetails()"><img src="../../../../assets/icons/admin.svg"
+                        class="icon-m filter-color"><span class="ms-3">Super Admin
+                        Details</span></button></mat-list-item>
+            <mat-list-item role="listitem"><button mat-button class="button-font"
+                    (click)="viewReportDetails()"><mat-icon>file_copy</mat-icon><span
+                        class="ms-4">Reports</span></button></mat-list-item>
+        </mat-list>
+    </mat-drawer>
+    <div class="example-sidenav-content">
+        <div class="content" #dashboard>
+            <app-dashboard-page></app-dashboard-page>
         </div>
-    </mat-drawer-container>
+        <div class="content mt-3">
+            <app-employee-details></app-employee-details>
+        </div>
+        <div class="content mt-3">
+            <app-admin-details></app-admin-details>
+        </div>
+        <div class="content mt-3">
+            <app-report-page></app-report-page>
+        </div>
+    </div>
+</mat-drawer-container>

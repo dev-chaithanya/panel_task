@@ -5,6 +5,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { NgModule } from '@angular/core';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { DashboardPageComponent } from './components/dashboard-page/dashboard-page.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
  export const routes: Routes = [
     {
@@ -31,6 +32,10 @@ import { DashboardPageComponent } from './components/dashboard-page/dashboard-pa
     {
         path: 'Dashboard',
         component:  DashboardPageComponent 
+    },
+    {
+        path: 'Profile',
+        component: ProfileComponent
     },
 ];
 

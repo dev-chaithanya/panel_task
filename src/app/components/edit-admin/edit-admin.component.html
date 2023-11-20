@@ -1,0 +1,25 @@
+<h3 class="title-style-color" mat-dialog-title>Edit Admin</h3>
+<div mat-dialog-content class="mt-2 pt-2">
+    <form [formGroup]="editAdminForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Admin Id</mat-label>
+            <input formControlName="AdminId" matInput placeholder="Admin Id">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Admin Name</mat-label>
+            <input formControlName="AdminName" matInput placeholder="Admin Name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Admin Email</mat-label>
+            <input formControlName="AdminEmail" matInput placeholder="Admin Email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Designation</mat-label>
+            <input formControlName="designation" matInput placeholder="Designation">
+        </mat-form-field>
+    </form>
+</div>
+<div class="mt-2 pt-2 pb-1" [align]="'end'">
+    <button mat-stroked-button mat-dialog-close class="button-color">Cancel</button>
+    <button mat-raised-button class="button-color-primary ms-4" (click)="EditAdmin()">Edit</button>
+</div>

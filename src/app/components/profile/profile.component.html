@@ -1,0 +1,59 @@
+<div class="color-section">
+    <div class="ms-3 mb-3">
+        <button mat-stroked-button (click)="goBack()" class="button-bg-custom"><mat-icon class="icon-style">keyboard_arrow_left</mat-icon> Back</button>
+    </div>
+    <div class="row ms-5">
+        <div class="col-4 ms-2">
+            <mat-card class="profile-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title class="title-color">Chaithanya K Nair</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image src="../../../../assets/icons/admin.svg">
+                <mat-card-content>
+                    <div class="custom-text-size"><span class="custom-text">Designation: </span> Software Engineer</div>
+                    <div class="custom-text-size"><span class="custom-text"> Mail Id: </span> chaithanya.nair06.example.com</div>
+                </mat-card-content>
+                <mat-card-actions>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+        <div class="col-6 no-padding-x">
+            <mat-card class="profile-card">
+                <mat-card-content>
+                    <div class="custom-text-size mt-3 mb-3"><span class="custom-text">Employee Id: </span>&nbsp;&nbsp;&nbsp;AO012</div>
+                    <div class="custom-text-size mt-3 mb-3"><span class="custom-text"> Mail Id: </span>&nbsp;&nbsp;&nbsp; chaithanya.nair06.example.com</div>
+                    <div class="custom-text-size mt-3 mb-3"><span class="custom-text">Employee User Name: </span>&nbsp;&nbsp;&nbsp;dev-chaithanya</div>
+                    <div class="custom-text-size mt-3 mb-3"><span class="custom-text"> Contact:</span> &nbsp;&nbsp;&nbsp;7510171900</div>
+                    <div class="custom-text-size mt-3 mb-3"><span class="custom-text">Location: </span>&nbsp;&nbsp;&nbsp;Banglore</div>
+                    <div class="custom-text-size mt-3 mb-3"><span class="custom-text"> Contact:</span> &nbsp;&nbsp;&nbsp;7510171900</div>
+
+                    <h2 class="title-style-color">Certifications</h2>
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                        <!-- dateOfCompletion Column -->
+                        <ng-container matColumnDef="date">
+                          <th mat-header-cell *matHeaderCellDef class="title-style-color"> date Of Completion </th>
+                          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                        </ng-container>
+                      
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="name">
+                          <th mat-header-cell *matHeaderCellDef class="title-style-color">name </th>
+                          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                        </ng-container>
+                      
+                        <!-- yearOfExperience Column -->
+                        <ng-container matColumnDef="Experience">
+                          <th mat-header-cell *matHeaderCellDef class="title-style-color"> year Of Experience</th>
+                          <td mat-cell *matCellDef="let element"> {{element.Experience}} </td>
+                        </ng-container>
+                      
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                      </table>
+                </mat-card-content>
+              </mat-card>
+        </div>
+    </div>
+</div>

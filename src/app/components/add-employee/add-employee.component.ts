@@ -43,10 +43,10 @@ export class AddEmployeeComponent {
 
     // if (this.employeeForm.valid) {
     //   this.api.postEmployee(this.employeeForm.value).subscribe({
-    //     if(res) {
+    //     next:(res)=> {
     //       alert("employee Added successfully!");
-    //     }
-    //     else {
+    //     },
+    //     error:() => {
     //       alert("Error while adding the employee!");
     //     }
     //   })

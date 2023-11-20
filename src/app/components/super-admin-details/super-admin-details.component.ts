@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatTabsModule} from '@angular/material/tabs';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
-import { EXAMPLE_DATA, UserData } from '../../data';
 import { MatButtonModule } from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { Router } from '@angular/router';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { EXAMPLE_DATA, UserData } from '../../data';
+import { MatDialog } from '@angular/material/dialog';
 import { AddAdminComponent } from '../add-admin/add-admin.component';
 import { EditAdminComponent } from '../edit-admin/edit-admin.component';
-import { Router } from '@angular/router';
+
 @Component({
-  selector: 'app-admin-details',
+  selector: 'app-super-admin-details',
   standalone: true,
-  imports: [CommonModule, MatTabsModule, MatTableModule, MatCardModule, MatButtonModule, MatIconModule, MatDialogModule],
-  templateUrl: './admin-details.component.html',
-  styleUrl: './admin-details.component.scss'
+  imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule, MatTableModule ],
+  templateUrl: './super-admin-details.component.html',
+  styleUrl: './super-admin-details.component.scss'
 })
-export class AdminDetailsComponent {
+export class SuperAdminDetailsComponent {
   displayedColumns: string[] = ['id', 'name', 'email', 'Designation', 'Action'];
   dataSource = new MatTableDataSource<UserData>(EXAMPLE_DATA);
 
@@ -37,9 +37,9 @@ export class AdminDetailsComponent {
 
   isButtonVisible(): boolean {
     const currentRoute = this.router.url;
-    return currentRoute === '/AdminDetailsPage';
+    return currentRoute === '/SuperAdminDetailsPage';
   }
-  
+
   goBack() {
     this.router.navigate(['LandingPage']);
   }

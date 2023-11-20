@@ -14,7 +14,11 @@ export class UlearnPageComponent {
 
   chartOptionsBar = {
     title: {
-    	text: "Number completed course vs score"
+    	text: "Number completed course vs score",
+      fontSize: 16,
+      fontFamily: "Arial, sans-serif",
+      fontColor: "#1E7BE4",
+
     },
     data: [{
       type: "column",
@@ -43,7 +47,10 @@ export class UlearnPageComponent {
   chartOptionsPie = {
 	  animationEnabled: true,
 	  title:{
-		text: "Course Participation"
+		text: "Course Participation",
+    fontSize: 16,
+    fontFamily: "Arial, sans-serif",
+    fontColor: "#1E7BE4",
 	  },
 	  data: [{
 		type: "doughnut",

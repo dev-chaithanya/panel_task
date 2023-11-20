@@ -1,23 +1,28 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-report-page',
   standalone: true,
-  imports: [CommonModule, CanvasJSAngularChartsModule],
+  imports: [CommonModule, CanvasJSAngularChartsModule, MatButtonModule, MatIconModule],
   templateUrl: './report-page.component.html',
   styleUrl: './report-page.component.scss'
 })
 export class ReportPageComponent {
 
+	constructor(private router: Router){}
 chartOptions = {
 	  animationEnabled: true,
 	  exportEnabled: true,
 	  title: {
 		text: "Stimulation Performance",
-		fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-		fontWeight: "bold"
+		fontSize: 16,
+      fontFamily: "Arial, sans-serif",
+      fontColor: "#1E7BE4",
 	  },
 	  axisY: {
 		title: "Interaction Rate",
@@ -91,4 +96,13 @@ chartOptions = {
 		]
 	  }]
 	}
+
+	isButtonVisible(): boolean {
+		const currentRoute = this.router.url;
+		return currentRoute === '/ReportPage';
+	  }
+	
+	  goBack() {
+		this.router.navigate(['LandingPage']);
+	  }
 }

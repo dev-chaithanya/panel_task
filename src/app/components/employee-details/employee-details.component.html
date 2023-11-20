@@ -1,6 +1,9 @@
 <div class="container ms-2 mt-5">
+  <div class="ms-3 mb-3">
+    <button mat-stroked-button *ngIf="isButtonVisible()" (click)="goBack()"  class="button-bg-custom"><mat-icon class="icon-style">keyboard_arrow_left</mat-icon> Back</button>
+</div>
     <div>
-        <h2 class="title-style-color">Employee Details</h2>
+        <h2 class="title-style-color button-font">Employee Details</h2>
         <div class="align-custom ms-5"><button mat-stroked-button class="button-color" (click)="addEmployee()"> Add</button>
         </div>
     </div>

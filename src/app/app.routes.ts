@@ -6,6 +6,10 @@ import { NgModule } from '@angular/core';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { DashboardPageComponent } from './components/dashboard-page/dashboard-page.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AdminDetailsComponent } from './components/admin-details/admin-details.component';
+import { SuperAdminDetailsComponent } from './components/super-admin-details/super-admin-details.component';
+import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component';
+import { ReportPageComponent } from './components/report-page/report-page/report-page.component';
 
  export const routes: Routes = [
     {
@@ -37,6 +41,23 @@ import { ProfileComponent } from './components/profile/profile.component';
         path: 'Profile',
         component: ProfileComponent
     },
+    {
+        path: 'AdminDetailsPage',
+        component: AdminDetailsComponent
+    },
+    {
+        path: 'SuperAdminDetailsPage',
+        component: SuperAdminDetailsComponent
+    },
+    {
+        path: 'EmployeeDetailsPage',
+        component: EmployeeDetailsComponent
+    },
+    {
+        path: 'ReportPage',
+        component: ReportPageComponent
+    },
+
 ];
 
 @NgModule({

@@ -45,15 +45,19 @@ export class NavBarComponent {
   }
 
   viewReportDetails(){
-    this.report.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    this.router.navigate(['ReportPage']);
   }
 
   viewAdminDetails(){
-    this.admin.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    this.router.navigate(['AdminDetailsPage']);
+  }
+
+  viewSuperAdminDetails(){
+    this.router.navigate(['SuperAdminDetailsPage']);
   }
 
   viewEmployeeDetails(){
-    this.employee.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    this.router.navigate(['EmployeeDetailsPage']);
   }
 
   viewProfile(){
